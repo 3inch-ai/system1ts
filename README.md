@@ -2,7 +2,15 @@
 
 A small, typed decision SDK from [3inch.ai Labs](https://3inch.ai): one `decide()` API for **System One** (TypeSafe Jev and compatible local servers) and **OpenAI Decisions**. ESM, public TypeScript declarations, zero runtime dependencies. No telemetry, automatic retries, model fallback, or environment-variable discovery.
 
-**Release candidate 0.1.0.** Prepared for npm publication; not published by this implementation task. The name is not reserved. Until a release is published, build and install the local tarball (`npm ci && npm pack`, then `npm install ./3inch.ai-system1ts-0.1.0.tgz`). After publication: `npm install @3inch.ai/system1ts`.
+## Installation
+
+Requires Node.js >=22.
+
+```sh
+npm install @3inch.ai/system1ts
+```
+
+Published on [npm](https://www.npmjs.com/package/@3inch.ai/system1ts).
 
 ## Quick start
 
