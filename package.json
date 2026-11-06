@@ -1,5 +1,5 @@
 {
-  "name": "system1ts",
+  "name": "systemone-ts",
   "version": "0.1.0",
   "description": "Typed decisions across System One and OpenAI Decisions — by 3inch.ai Labs",
   "type": "module",
