@@ -1,13 +1,13 @@
-# systemone-ts
+# @3inch.ai/system1ts
 
 A small, typed decision SDK from [3inch.ai Labs](https://3inch.ai): one `decide()` API for **System One** (TypeSafe Jev and compatible local servers) and **OpenAI Decisions**. ESM, public TypeScript declarations, zero runtime dependencies. No telemetry, automatic retries, model fallback, or environment-variable discovery.
 
-**Release candidate 0.1.0.** Prepared for npm publication; not published by this implementation task. The name is not reserved. Until a release is published, build and install the local tarball (`npm ci && npm pack`, then `npm install ./systemone-ts-0.1.0.tgz`). After publication: `npm install systemone-ts`.
+**Release candidate 0.1.0.** Prepared for npm publication; not published by this implementation task. The name is not reserved. Until a release is published, build and install the local tarball (`npm ci && npm pack`, then `npm install ./3inch.ai-system1ts-0.1.0.tgz`). After publication: `npm install @3inch.ai/system1ts`.
 
 ## Quick start
 
 ```ts
-import { jev } from "systemone-ts";
+import { jev } from "@3inch.ai/system1ts";
 
 const client = jev({ apiKey: process.env.TYPESAFE_API_KEY });
 const result = await client.decide({
@@ -28,7 +28,7 @@ API keys are explicit client settings. The SDK never reads process globals; in W
 ## Switch connection without changing the questions
 
 ```ts
-import { jev, openai, h2o, createClient, systemOne } from "systemone-ts";
+import { jev, openai, h2o, createClient, systemOne } from "@3inch.ai/system1ts";
 
 const cloud = jev({
   apiKey: process.env.TYPESAFE_API_KEY,
@@ -95,7 +95,7 @@ Complete distributions must contain each requested value exactly once, each prob
 ## States and failures
 
 ```ts
-import { System1Error } from "systemone-ts";
+import { System1Error } from "@3inch.ai/system1ts";
 try {
   const r = await client.decide(request, { signal, timeoutMs: 10_000 });
   for (const [name, a] of Object.entries(r.answers)) {
@@ -157,7 +157,7 @@ All documented OpenAI top-level cache controls above are forwarded. Cache-key ma
 For a verified compatible System One server, declare extension keys explicitly:
 
 ```ts
-import { createSystemOneAdapter, createClient } from "systemone-ts";
+import { createSystemOneAdapter, createClient } from "@3inch.ai/system1ts";
 const shim = createSystemOneAdapter({
   id: "h2o-shim",
   extraBodyKeys: ["attention_mode"],

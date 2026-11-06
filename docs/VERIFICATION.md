@@ -21,7 +21,7 @@ Checked **2026-11-06**, macOS development host. No hosted inference credentials 
 
 Toolchain: npm **11.7.0**, TypeScript **5.9.3**, esbuild **0.28.2**, Miniflare **4.20260730.0**, workerd **1.20260730.1**, Workers compatibility date **2026-07-30**. Node >=22 is the design/engine target; Node 22/24 and Linux CI are configured but **not locally executed in this task**. Cloudflare cloud deployment was not run.
 
-`npm run test:package` leaves `systemone-ts-0.1.0.tgz` (gitignored), removes only its scratch consumer, and reports current file count/unpacked size from actual npm output. Initial successful inspected artifact: **36 files, 107,778 bytes unpacked**. Repacking after README/CHANGELOG changes can change bytes without changing behavior; use current output rather than treating these measurements as a checksum. No package is published. Runtime dependencies: **0**. No source spec, test fixtures, `.env`, `node_modules` or credentials are packed. No claim that an npm name is reserved or publication rights granted.
+`npm run test:package` leaves `3inch.ai-system1ts-0.1.0.tgz` (gitignored), removes only its scratch consumer, and reports current file count/unpacked size from actual npm output. Initial successful inspected artifact: **36 files, 107,778 bytes unpacked**. Repacking after README/CHANGELOG changes can change bytes without changing behavior; use current output rather than treating these measurements as a checksum. No package is published. Runtime dependencies: **0**. No source spec, test fixtures, `.env`, `node_modules` or credentials are packed. No claim that an npm name is reserved or publication rights granted.
 
 ## Required automated acceptance criteria (spec §9)
 
