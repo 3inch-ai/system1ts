@@ -10,6 +10,7 @@ Changes to result meaning, error classification, defaults, and types all count a
 - Distinguish explicit refusal, malformed/missing answer, unsupported preflight request and typed transport/HTTP failures.
 - Validate complete distributions and score consistency without filling missing values or renormalizing.
 - Add fetch injection, caller abort, real transport timeout, no retries/fallback, redirect refusal.
+- Reject non-enumerable `toJSON` serialization hooks so accepted evidence/question content cannot silently replace itself on the wire; regression tested for both protocols.
 - Add strict type tests, documented-example fixtures, synthetic anomaly tests, Node/Bun real-local-HTTP and workerd offline smoke, installed-tarball runtime/type checks.
 - Preserve the original Japanese specification and document official sources, acceptance coverage, API-change and release maintenance workflows.
 

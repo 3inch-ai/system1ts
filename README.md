@@ -90,7 +90,7 @@ Complete distributions must contain each requested value exactly once, each prob
 
 - System One: text/object/array sent unchanged in `state`. Structured/nullable/omitted question instructions, predicate `criteria`, and descriptions are retained. Score levels become strings when label-only; with a description they become `{ label, description }`, keeping both meaningful fields in the model-visible criterion. The returned `legend` must match those exact criteria.
 - OpenAI: text sent as `input`; JSON sent natively as `[{ role: "user", content: [{ type: "input_json", data }] }]`. `data` must be an object or array of objects, with at most 32 container levels, 10,000 values and 256 KiB compact UTF-8. Scalars/arrays of scalars aren't silently stringified. Structured instructions/descriptions or predicate criteria not representable in this common text-only API are rejected before HTTP. OpenAI's larger conversation/image/tool-input surface is not exposed by this first release.
-- JSON must be losslessly serializable: nonfinite numbers, cycles, bigint, sparse arrays, undefined values and non-plain objects are rejected. SDK JSON-depth default is 64 outside native OpenAI JSON. Server body/token limits are still server-enforced; the SDK does not estimate token counts.
+- JSON must be losslessly serializable: nonfinite numbers, cycles, bigint, sparse arrays, undefined values, serialization hooks (including non-enumerable `toJSON`) and non-plain objects are rejected. SDK JSON-depth default is 64 outside native OpenAI JSON. Server body/token limits are still server-enforced; the SDK does not estimate token counts.
 
 ## States and failures
 
